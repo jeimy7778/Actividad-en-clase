@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+</head>
+<body>
+    
+<!--Asignación JS-->
+
+    <p id="resta"></p>
+    <p id="porcentaje"></p>
+    <p id="suma"></p>
+
+    <h2>Asignacion Funciones</h2>
+<script>
+
+    var x = 20;
+    x-= 10;
+    document.getElementById("resta").innerHTML = x;
+
+        var y = 90;
+        y %= 50;
+        document.getElementById("porcentaje").innerHTML = y;
+
+            var z = 20;
+                z += 10;
+                document.getElementById("suma").innerHTML = z;
+
+</script>
+
+    
+
+
+    <!-- Funciones-->
+
+    <p id="funcionmultiplicacion"></p>
+
+    <p id="barrio1"></p>
+    <p id="barrio2"></p>
+
+    <p id="Nombre1"></p>
+    <p id="Nombre2"></p>
+
+    <h2> FUNCIONES</h2>
+
+    <script>
+        var a = myfunction(6, 3);
+        document.getElementById("funcionmultiplicacion").innerHTML = a;
+
+        function myfunction(a, b) {
+            return a * b;
+        }
+        
+
+        myfunction();
+
+        function myfunction() {
+            alert("bogota");
+            var neighborhood = "Bogota";
+            document.getElementById("barrio1").innerHTML =
+            typeof neighborhood + " " + neighborhood;
+        }
+
+        document.getElementById("barrio2").innerHTML =
+        typeof neighborhood;
+
+
+        twofunction();
+
+        function twofunction() {
+            alert("Bienvenidos");
+            var neighborhood = "Bienvenidos";
+            document.getElementById("Nombre1").innerHTML =
+            typeof neighborhood + " " + neighborhood;
+        }
+
+        document.getElementById("Nombre2").innerHTML =
+        typeof neighborhood;
+
+    </script>
+
+        <!--Objetos-->
+
+        <h2> Objetos </h2>
+        <p id="Carro1"></p>
+
+        <p id="descripcionpersona"></p>
+
+        <p id="Perro1"></p>
+
+        <script>
+            var carro = {
+                Marca: "Hyundai",
+                Referencia: "Tucson",
+                Modelo: "2020",
+
+                fullmarca : function () {
+                    return this.Marca + " " + this.Referencia + " " + this.Modelo;
+                }
+            };
+
+            document.getElementById("Carro1").innerHTML = carro.fullmarca();
+
+
+            var persona = {
+                Nombre: "Alberto",
+                Apellido: "Linares",
+                Edad: "25",
+                Profesion: "Independiente",
+
+                fullpersona : function () {
+                    return this.Nombre + " " + this.Apellido + " " + this.Edad + "años" + " " + this.Profesion;
+                }
+            };
+
+            document.getElementById("descripcionpersona").innerHTML = persona.fullpersona();
+
+
+            var Perro = {
+                Raza: "Beagle",
+                Tamaño: "Mediano",
+                Color: "blanco con negro",
+
+                fullperro : function () {
+                    return this.Raza + " " + this.Tamaño + " " + this.Color;
+                }
+            };
+
+            document.getElementById("Perro1").innerHTML = Perro.fullperro();
+
+
+        </script>
+
+
+
+    
+
+
+    
+
+</body>
+</html>
