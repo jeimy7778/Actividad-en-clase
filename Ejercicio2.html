@@ -60,8 +60,8 @@
         myfunction();
 
         function myfunction() {
-            alert("bogota");
-            var neighborhood = "Bogota";
+            alert("Modelia");
+            var neighborhood = "Modelia";
             document.getElementById("barrio1").innerHTML =
             typeof neighborhood + " " + neighborhood;
         }
@@ -82,11 +82,14 @@
         document.getElementById("Nombre2").innerHTML =
         typeof neighborhood;
 
-    </script>
+    </script> 
+    
 
+
+    
         <!--Objetos-->
 
-        <h2> Objetos </h2>
+    <h2> Objetos </h2>
         <p id="Carro1"></p>
 
         <p id="descripcionpersona"></p>
@@ -135,10 +138,169 @@
 
 
         </script>
-
-
-
+        
     
+
+        <!--Matrices JavaScript-->
+
+    <h2> Matrices JaveScript</h2>
+
+        <p id=Matriz1></p>
+
+        <p id= asociativas></p>
+
+        <p id="numeros"></p>
+
+        <script>
+            var ciudades, text, flen, i;
+            ciudades = ["Bogota", "Medellin", "Cucuta", "Bucaramanga", "Duitama"];
+            flen = ciudades.length;
+
+            text = "<ul>";
+            for (i = 0; i < flen; i++) {
+                text += "<li>" + ciudades[i] + "</li>"; 
+            }
+            text += "</ul>";
+
+            document.getElementById("Matriz1").innerHTML = text;
+        
+        
+            var Colombia = [];
+            Colombia[0] = "Pais";
+            Colombia[1] = "Bogota";
+            Colombia[2] = "1103";
+            document.getElementById("asociativas").innerHTML = 
+            Colombia[0] + " " + Colombia.length;
+
+
+
+
+            var points = [10, 20, 30, 40 ,50, 60, 70, 80, 90, 100];
+            document.getElementById("numeros").innerHTML = points[5];
+        </script>
+
+
+        <!--Methods-->
+
+    <h2> Methods</h2>
+        <p id="Colores1"></p>
+
+        <p id="Transporte1"></p>
+        <p id="Transporte2"></p>
+        <button onclick="Agregar()">Insertar</button>
+
+
+        <p id="Nombres2"></p>
+
+        <script>
+            var Colores = ["Amarillo", "Rojo", "Verde", "Morado", "Azul", "Blanco"];
+            document.getElementById("Colores1").innerHTML = Colores.join(" * ");
+
+
+            var Transporte = ["carro", "bus", "tren", "Barco"];
+            document.getElementById("Transporte1").innerHTML = "Lista original:<br>" + Transporte;
+
+            function Agregar() {
+                Transporte.splice(2, 0, "Avion", "Submarino");
+                document.getElementById("Transporte2").innerHTML = "Nueva lista:<br>" + Transporte;
+            }
+
+
+            var mujeres = ["Andres", "Maria", "Isabella"];
+            var Hombres = ["Carlos", "Andres", "Oscar"];
+            var listanombres = mujeres.concat(Hombres);
+
+            document.getElementById("Nombres2").innerHTML = listanombres;
+
+        </script>
+
+        
+    <h2> Comparación</h2>
+    
+
+        <p id="comparacion1"></p>
+        <p> La variable x es menor que 3 o la variable y es mayor que 5</p>
+    
+        <p id="Edad"></p>
+        <button onclick="Edad1" Edad></button>
+        <input id="edad" value="18" />
+        <p> Ingrese su edad </p>
+
+        <p id="Comparacion"></p>
+        <p id="Comparacion2"></p>
+
+        <script>
+            var x = 2;
+            var y = 4;
+
+            document.getElementById("comparacion1").innerHTML = 
+            (x == 3 || y == 3) + "<br>" +
+            (x == 2 || y == 1) + "<br>" +
+            (x == 4 || y == 4) + "<br>" +
+            (x == 2 || y == 4);
+
+
+            function Edad1() {
+                var edad, mayordeedad;
+                edad = document.getElementById("edad").value;
+                mayordeedad = (edad < 18) ? "Ingresa tu edad": "Eres mayor de edad";
+                document.getElementById("edad").innerHTML = mayordeedad + 
+                "para trabajar.";
+            }
+
+
+            document.getElementById("Comparacion").innerHTML = 5 < 20;
+            document.getElementById("Comparacion2").innerHTML = 3 > 10;
+
+        </script>
+    
+    <h2> Declaracion del conmutador</h2>
+
+        <p id="Meses1"></p>
+
+        <script>
+            var mes;
+            switch (new Date().getMeses ()) {
+                case 0:
+                    Mes = "Enero";
+                    break;
+                case 1:
+                        Mes = "Febrero";
+                    break;
+                case 2: 
+                        Mes = "Marzo";
+                    break;
+                case 3: 
+                        Mes = "Abril";
+                    break;        
+                case 4: 
+                        Mes = "Mayo";
+                    break;         
+                case 5: 
+                        Mes = "Junio";
+                    break;          
+                case 6: 
+                        Mes = "Julio";
+                    break;          
+                case 7: 
+                        Mes = "Agosto";
+                    break;
+                case 8: 
+                        Mes = "Septiembre";
+                    break;            
+                case 9: 
+                        Mes = "Octubre";
+                    break;        
+                case 10: 
+                        Mes = "Noviembre";
+                    break;        
+                case 11: 
+                        Mes = "Diciembre";
+                    break;        
+            }
+            document.getElementById("Meses1").innerHTML = "Today is"
+            + Mes ;
+        </script>
 
 
     

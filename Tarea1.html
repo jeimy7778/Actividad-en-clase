@@ -9,18 +9,23 @@
     <script src='main.js'></script>
 </head>
 <body>
-    <script languaje="javascript">
-        var coche = new Array();
-        coche["color"] = "rojo"; 
-        coche["marca"] = "seat"; 
-        coche["modelo"] = "leon";
 
+    <p id="carro"></p>
+    <script>
+        var coche = Text, flen, i;
+        coche["color"] = "Verde"; 
+        coche["marca"] = "Seat"; 
+        coche["modelo"] = "Ibiza";
+        flen = coche.length;
         
-        alert(coche)
 
-        for (let coche = 0; coche < obj.employees.length; coche++) {
-            document.write(obj.employees[coche].coche +" "+obj.employees[coche].rojo + "<br>");
-        }
+        Text = "<ul>";
+        for (i = 0; i < flen; i++) {
+            Text += "<li>" + coche[i] + "</li>";
+        }    
+        Text += "</ul>";
+
+        document.getElementById("carro").innerHTML = Text;
         
         
        // var a = rojo;
